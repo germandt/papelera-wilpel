@@ -18,18 +18,19 @@ test.describe('Home de Wilpel', () => {
     expect(errors).toEqual([]);
   });
 
-  test('el header tiene los 4 links de navegación', async ({ page }) => {
+  test('el header tiene los 5 links de navegación', async ({ page }) => {
     await page.goto('/');
     const nav = page.locator('#site-nav');
     await expect(nav.getByRole('link', { name: 'Nosotros' })).toHaveAttribute('href', '#nosotros');
     await expect(nav.getByRole('link', { name: 'Rubros' })).toHaveAttribute('href', '#rubros');
+    await expect(nav.getByRole('link', { name: 'Opiniones' })).toHaveAttribute('href', '#opiniones');
     await expect(nav.getByRole('link', { name: 'Ubicación' })).toHaveAttribute('href', '#ubicacion');
     await expect(nav.getByRole('link', { name: 'Contacto' })).toHaveAttribute('href', '#contacto');
   });
 
   test('las secciones ancladas existen', async ({ page }) => {
     await page.goto('/');
-    for (const id of ['nosotros', 'rubros', 'contacto', 'ubicacion']) {
+    for (const id of ['nosotros', 'rubros', 'opiniones', 'contacto', 'ubicacion']) {
       await expect(page.locator(`#${id}`)).toHaveCount(1);
     }
   });
@@ -57,6 +58,18 @@ test.describe('Home de Wilpel', () => {
       const link = tile.getByRole('link', { name: /Consultar/ });
       await expect(link).toHaveAttribute('href', /^https:\/\/wa\.me\/5491162701341\?text=/);
     }
+  });
+
+  test('la sección de opiniones muestra el rating real y las 3 reseñas', async ({ page }) => {
+    await page.goto('/');
+    const opiniones = page.locator('#opiniones');
+    await expect(opiniones).toContainText('4.5');
+    await expect(opiniones).toContainText('472 opiniones en Google');
+    for (const nombre of ['Ricardo Omar Varela', 'Matias Lopez', 'Julio Lazarte']) {
+      await expect(opiniones).toContainText(nombre);
+    }
+    const link = opiniones.getByRole('link', { name: 'Ver todas las reseñas en Google' });
+    await expect(link).toHaveAttribute('href', /google\.com\/maps\/place\/Papelera\+Wilpel/);
   });
 
   test('todos los botones de WhatsApp apuntan al número correcto', async ({ page }) => {

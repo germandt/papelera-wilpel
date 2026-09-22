@@ -281,6 +281,48 @@ html { scrollbar-color: var(--blue) var(--cream); scrollbar-width: thin; }
 .rubro--d:hover { box-shadow: 0 20px 36px -18px rgba(18, 43, 76, 0.18); }
 
 /* ============================================================
+   Opiniones
+   ============================================================ */
+.opiniones { background: var(--cream); padding-block: clamp(3.5rem, 7vw, 5.5rem); }
+.opiniones h2 { font-size: clamp(1.8rem, 3.4vw, 2.5rem); }
+
+.opiniones__rating {
+  display: flex; align-items: center; flex-wrap: wrap;
+  gap: 0.7rem; margin-top: 1.1rem;
+}
+.opiniones__score {
+  font-family: var(--font-display); font-weight: 800;
+  font-size: clamp(1.8rem, 3.4vw, 2.5rem); /* mismo paso que los h2 de sección */
+  color: var(--navy); line-height: 1;
+}
+.opiniones__stars svg { width: 20px; height: 20px; }
+.opiniones__stars-empty { display: flex; gap: 2px; color: var(--cream-line); }
+.opiniones__stars--avg { position: relative; display: inline-flex; }
+.opiniones__stars-fill {
+  position: absolute; inset: 0; width: 90%; overflow: hidden;
+  display: flex; gap: 2px; color: var(--red-ink);
+}
+.opiniones__count { color: var(--ink-soft); font-size: 0.95rem; }
+
+.opiniones__grid {
+  list-style: none; margin: 2.5rem 0 0; padding: 0;
+  display: grid; grid-template-columns: 1fr; gap: 1.1rem;
+}
+@media (min-width: 720px) { .opiniones__grid { grid-template-columns: repeat(3, 1fr); } }
+
+.opinion {
+  background: var(--white); border: 1.5px solid var(--cream-line);
+  border-radius: var(--radius); padding: 1.6rem 1.5rem;
+  display: flex; flex-direction: column; gap: 0.8rem;
+}
+.opinion__stars { display: flex; gap: 2px; color: var(--red-ink); }
+.opinion__stars svg { width: 16px; height: 16px; }
+.opinion__quote { font-size: 0.98rem; line-height: 1.55; color: var(--ink); flex: 1; }
+.opinion__author { font-weight: 700; color: var(--navy); font-size: 0.92rem; }
+
+.opiniones > .wrap > .btn { margin-top: 2.2rem; }
+
+/* ============================================================
    WhatsApp band
    ============================================================ */
 .whatsapp-band {

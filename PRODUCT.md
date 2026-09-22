@@ -36,7 +36,9 @@ con rubros variados y envíos a domicilio.
 ## Operating Context
 
 - Venta por mayor y por menor.
-- Atención en el local de Av. Belgrano 6085, Wilde (1875), Buenos Aires.
+- Atención en el local de Av. Belgrano 6085, Wilde (1875), Buenos Aires. Conflicto sin resolver: la ficha
+  de Google Maps del negocio dice "Av. Manuel Belgrano 6042" — falta que el cliente confirme cuál es la
+  dirección correcta (ver Evidence on Hand).
 - Horario: Lun-Vie 8:00 a 13:00 y 14:30 a 17:30. Sábados 8:00 a 13:30.
 - Contacto: teléfonos 4206-9662 y 4206-9747; WhatsApp 11 6270-1341 (`https://wa.me/5491162701341`).
 - Instagram: @wilpelpapel. Sus historias destacadas ya ordenan la información: Nosotros, Horarios, Contacto, Pagos, Envíos, Ubicación.
@@ -68,8 +70,13 @@ con rubros variados y envíos a domicilio.
 - `design/assets/`: capturas del logo y de un post del Instagram (baja resolución, solo referencia).
 - El usuario indicó que existen fotos propias de productos y una lista de categorías, pero todavía no se recibieron.
   Mientras tanto, solo hay lo publicado en el Instagram.
-- No existen: logo vectorial, testimonios, lista de clientes, precios, condiciones de envío ni medios de pago
-  confirmados. No hay que inventarlos.
+- Reseñas reales relevadas el 22/09/2026 desde la ficha de Google Maps del negocio ("Papelera Wilpel"):
+  calificación 4.5 sobre 472 reseñas, y 3 reseñas con nombre y 5 estrellas cada una (Ricardo Omar Varela,
+  Matias Lopez, Julio Lazarte). Usadas tal cual en la sección "Opiniones" — no son inventadas.
+  La ficha de Google dice la dirección "Av. Manuel Belgrano 6042", distinta a la "6085" usada en el resto
+  del sitio; conflicto sin resolver, ver Operating Context.
+- No existen: logo vectorial, lista de clientes más allá de las 3 reseñas citadas, precios, condiciones de
+  envío ni medios de pago confirmados. No hay que inventarlos.
 
 ## Product Principles
 
