@@ -126,7 +126,7 @@ html { scrollbar-color: var(--blue) var(--cream); scrollbar-width: thin; }
 }
 
 .brand { display: flex; align-items: center; gap: 0.65rem; flex: none; }
-.brand__mark { width: 40px; height: 40px; flex: none; } /* colores del ícono van hardcodeados en el símbolo SVG */
+.brand__mark { width: 40px; height: 40px; color: var(--red); flex: none; }
 .brand__type { display: flex; flex-direction: column; line-height: 1.05; }
 .brand__name { font-family: var(--font-display); font-weight: 800; font-size: 1.4rem; color: var(--navy); letter-spacing: -0.01em; }
 .brand__sub { font-weight: 500; font-size: 0.72rem; color: var(--ink-soft); text-transform: lowercase; letter-spacing: 0.02em; }
@@ -333,7 +333,7 @@ html { scrollbar-color: var(--blue) var(--cream); scrollbar-width: thin; }
 }
 .ubicacion__mark svg {
   width: min(280px, 60vw); height: min(280px, 60vw);
-  opacity: 0.16; /* el ícono ahora es relleno sólido (varios tonos de rojo), no hereda color */
+  color: var(--blue); opacity: 0.16;
 }
 
 /* ============================================================
