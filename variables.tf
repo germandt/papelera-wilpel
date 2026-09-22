@@ -21,3 +21,9 @@ variable "budget_alert_email" {
   type        = string
   # Sin default a propósito: se define en terraform.tfvars (gitignored), no se hardcodea acá.
 }
+
+variable "github_repo" {
+  description = "Repo de GitHub (owner/name) autorizado a asumir el rol de deploy vía OIDC."
+  type        = string
+  default     = "germandt/papelera-wilpel"
+}

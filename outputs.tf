@@ -17,3 +17,8 @@ output "route53_nameservers" {
   description = "Nameservers a configurar como delegación del dominio en NIC.ar."
   value       = aws_route53_zone.site.name_servers
 }
+
+output "github_actions_deploy_role_arn" {
+  description = "Rol que asume GitHub Actions para desplegar. Se carga en el repo como variable AWS_DEPLOY_ROLE_ARN."
+  value       = aws_iam_role.github_actions_deploy.arn
+}

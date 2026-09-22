@@ -12,6 +12,11 @@ override.tf.json
 *_override.tf.json
 # .terraform.lock.hcl SÍ se commitea: fija las versiones de los providers.
 
+# Node / Playwright
+node_modules/
+playwright-report/
+test-results/
+
 # macOS
 .DS_Store
 
