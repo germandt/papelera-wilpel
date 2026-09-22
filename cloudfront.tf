@@ -14,6 +14,7 @@ resource "aws_cloudfront_distribution" "site" {
   default_root_object = "index.html"
   price_class         = var.price_class
   comment             = "Wilpel Papelera — home"
+  aliases             = [var.site_domain, "www.${var.site_domain}"]
 
   origin {
     domain_name              = aws_s3_bucket.site.bucket_regional_domain_name
@@ -39,9 +40,9 @@ resource "aws_cloudfront_distribution" "site" {
   }
 
   viewer_certificate {
-    # Certificado *.cloudfront.net de AWS: HTTPS ya andando, sin esperar validación de dominio.
-    # Cuando sumemos wilpel.com.ar, esto se reemplaza por un certificado ACM propio.
-    cloudfront_default_certificate = true
+    acm_certificate_arn      = aws_acm_certificate_validation.site.certificate_arn
+    ssl_support_method       = "sni-only"
+    minimum_protocol_version = "TLSv1.2_2021"
   }
 }
 

@@ -18,6 +18,11 @@ output "route53_nameservers" {
   value       = aws_route53_zone.site.name_servers
 }
 
+output "site_url" {
+  description = "URL final del sitio con dominio propio, una vez que el certificado valide."
+  value       = "https://${var.site_domain}"
+}
+
 output "github_actions_deploy_role_arn" {
   description = "Rol que asume GitHub Actions para desplegar. Se carga en el repo como variable AWS_DEPLOY_ROLE_ARN."
   value       = aws_iam_role.github_actions_deploy.arn
