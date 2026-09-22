@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-22T12:39:34Z",
+  "title": "Design System: Papelera Wilpel",
+  "extensions": {
+    "colorMeta": {
+      "navy": { "role": "neutral", "displayName": "Navy", "canonical": "#122B4C", "tonalRamp": ["#0A1A2E", "#0F223D", "#122B4C", "#1B3A61", "#2C4568", "#4A6483", "#8CA0B8", "#D2DBE4"] },
+      "navy-soft": { "role": "neutral", "displayName": "Navy Soft", "canonical": "#2C4568", "tonalRamp": ["#101A28", "#1B2C42", "#243A57", "#2C4568", "#4A6483", "#7288A0", "#A9B9CB", "#E1E7EE"] },
+      "red": { "role": "primary", "displayName": "Wilpel Red", "canonical": "#D44533", "tonalRamp": ["#3D0F09", "#631A11", "#8F2718", "#B23A2A", "#D44533", "#E56F5D", "#F2A798", "#FBE1DC"] },
+      "red-dark": { "role": "primary", "displayName": "Wilpel Red Dark (hover)", "canonical": "#B23A2A", "tonalRamp": ["#331008", "#521A11", "#78251A", "#962F22", "#B23A2A", "#D0604F", "#E89A8B", "#F8D8D1"] },
+      "red-ink": { "role": "primary", "displayName": "Red Ink (accessible working red)", "canonical": "#C23A28", "tonalRamp": ["#360E08", "#571711", "#7C2118", "#9C2E20", "#C23A28", "#DC624F", "#EFA292", "#FBDCD5"] },
+      "red-ink-soft": { "role": "primary", "displayName": "Red Ink Soft (secondary text on red-ink)", "canonical": "#FFEDE8", "tonalRamp": ["#4A1E14", "#742F21", "#A34532", "#CC6248", "#E68E77", "#F5B8A8", "#FBD7CB", "#FFEDE8"] },
+      "blue": { "role": "secondary", "displayName": "Wilde Blue", "canonical": "#2A67AF", "tonalRamp": ["#0B1E33", "#123153", "#1B4676", "#215A93", "#2A67AF", "#4F87C7", "#8DB2DC", "#D6E6F8"] },
+      "blue-soft": { "role": "secondary", "displayName": "Wilde Blue Soft", "canonical": "#3D7BC4", "tonalRamp": ["#0F2438", "#18375A", "#224D7D", "#2C63A0", "#3D7BC4", "#6699D3", "#9EC0E5", "#DCEAF7"] },
+      "cream": { "role": "neutral", "displayName": "Cream", "canonical": "#F9F6F2", "tonalRamp": ["#4A463D", "#7A7368", "#A69E90", "#D0C9BB", "#E7E0D4", "#F1ECE3", "#F9F6F2", "#FEFDFB"] },
+      "cream-line": { "role": "neutral", "displayName": "Cream Line (hairline border)", "canonical": "#E7E0D4", "tonalRamp": ["#3E392E", "#665F4E", "#8F8570", "#B7AC93", "#D6CDB9", "#E7E0D4", "#F1ECE3", "#FAF7F2"] },
+      "white": { "role": "neutral", "displayName": "White", "canonical": "#FFFFFF", "tonalRamp": ["#1A1A1A", "#404040", "#666666", "#8C8C8C", "#B3B3B3", "#D9D9D9", "#F0F0F0", "#FFFFFF"] },
+      "ink": { "role": "neutral", "displayName": "Ink (body text)", "canonical": "#16233A", "tonalRamp": ["#080D16", "#0F1727", "#16233A", "#243654", "#3C5379", "#6885AC", "#A4BCD9", "#E2EBF5"] },
+      "ink-soft": { "role": "neutral", "displayName": "Ink Soft (muted body text)", "canonical": "#4B5C78", "tonalRamp": ["#181E27", "#283142", "#3A475D", "#4B5C78", "#6C7F9D", "#96A6BF", "#C4D0E0", "#EBEFF5"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero H1 only — 'Papelera Wilpel' and its claim." },
+      "headline": { "displayName": "Headline", "purpose": "Section H2s: rubros, WhatsApp band, ubicación." },
+      "title": { "displayName": "Title", "purpose": "Rubro tile H3s; inherits the tile's own text color." },
+      "body": { "displayName": "Body", "purpose": "All paragraph copy, system font stack, no added personality." },
+      "label": { "displayName": "Label", "purpose": "Button text and rubro-tag chips; heavy-weight display face used as a functional label." }
+    },
+    "shadows": [
+      { "name": "hero-photo-lift", "value": "0 24px 48px -24px rgba(18, 43, 76, 0.35)", "purpose": "Resting shadow under the storefront photograph." },
+      { "name": "whatsapp-button-glow", "value": "0 8px 20px -8px rgba(194, 58, 40, 0.55)", "purpose": "Filled WhatsApp CTA at rest; intensifies on hover." },
+      { "name": "rubro-tile-hover-navy", "value": "0 20px 36px -18px rgba(18, 43, 76, 0.55)", "purpose": "Hover-only shadow on the navy rubro tile, tinted to match." },
+      { "name": "rubro-tile-hover-red", "value": "0 20px 36px -18px rgba(194, 58, 40, 0.55)", "purpose": "Hover-only shadow on the red-ink rubro tile." },
+      { "name": "rubro-tile-hover-blue", "value": "0 20px 36px -18px rgba(42, 103, 175, 0.5)", "purpose": "Hover-only shadow on the blue rubro tile." },
+      { "name": "rubro-tile-hover-cream", "value": "0 20px 36px -18px rgba(18, 43, 76, 0.18)", "purpose": "Hover-only shadow on the bordered cream rubro tile." },
+      { "name": "fab-whatsapp-glow", "value": "0 12px 28px -10px rgba(194, 58, 40, 0.65)", "purpose": "Always-on glow on the floating WhatsApp button once visible." }
+    ],
+    "motion": [
+      { "name": "ease-standard", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Default easing for all transitions and the hero entrance animation." },
+      { "name": "hero-in", "value": "opacity 0->1, translateY(18px)->0, 0.7s ease-standard, staggered per element", "purpose": "The single authored entrance choreography on hero photo/heading/lead/rubro-tags/actions, gated behind prefers-reduced-motion: no-preference." },
+      { "name": "mobile-nav-collapse", "value": "grid-template-rows 0fr -> 1fr, 0.28s ease-standard", "purpose": "Mobile nav open/close, chosen over animating max-height (flagged as layout-thrashing by the project's detector)." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md-nav", "value": "899px (nav collapses below this)" },
+      { "name": "md-hero", "value": "900px (hero becomes two-column)" },
+      { "name": "md-ubicacion", "value": "860px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "footer-md", "value": "720px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "WhatsApp Button (Primary)",
+      "kind": "button",
+      "refersTo": "button-whatsapp",
+      "description": "Filled pill CTA, red-ink background, white text, inline WhatsApp glyph. Used in header (small), hero (default), and contact band (big).",
+      "html": "<a class=\"ds-btn-whatsapp\" href=\"#\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M17.5 6.5A8.3 8.3 0 0 0 4.4 16.6L3.5 20.5l4-1a8.3 8.3 0 0 0 12-11.9zm-5.5 12.6h0a6.9 6.9 0 0 1-3.5-1l-.25-.15-2.6.7.7-2.5-.16-.26a6.9 6.9 0 1 1 5.8 3.2z\"/></svg><span>Escribinos por WhatsApp</span></a>",
+      "css": ".ds-btn-whatsapp { display: inline-flex; align-items: center; gap: 0.6rem; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 0.98rem; padding: 0.85rem 1.5rem; border-radius: 999px; background: #C23A28; color: #fff; box-shadow: 0 8px 20px -8px rgba(194, 58, 40, 0.55); transition: transform 0.18s cubic-bezier(0.16,1,0.3,1), box-shadow 0.18s cubic-bezier(0.16,1,0.3,1), background-color 0.18s; } .ds-btn-whatsapp:hover { background: #B23A2A; transform: translateY(-2px); box-shadow: 0 12px 24px -8px rgba(194, 58, 40, 0.6); } .ds-btn-whatsapp:focus-visible { outline: 2.5px solid #2A67AF; outline-offset: 3px; border-radius: 4px; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Transparent pill button with navy border/text, fills navy on hover. Used for secondary actions like 'Cómo llegar'.",
+      "html": "<a class=\"ds-btn-outline\" href=\"#\">Cómo llegar</a>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 700; font-size: 0.98rem; padding: 0.85rem 1.5rem; border-radius: 999px; background: transparent; color: #122B4C; border: 1.5px solid #122B4C; transition: background-color 0.18s, color 0.18s, transform 0.18s; } .ds-btn-outline:hover { background: #122B4C; color: #fff; transform: translateY(-2px); } .ds-btn-outline:focus-visible { outline: 2.5px solid #2A67AF; outline-offset: 3px; border-radius: 4px; }"
+    },
+    {
+      "name": "Rubro Tile (Committed Panel)",
+      "kind": "card",
+      "refersTo": "rubro-tile-navy",
+      "description": "Solid color-block category tile with inherited heading color and a stroke icon; one of four committed colors (navy/red-ink/blue/bordered-cream) rather than a uniform white card.",
+      "html": "<li class=\"ds-rubro ds-rubro--navy\"><svg class=\"ds-rubro__icon\" width=\"34\" height=\"34\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><g stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\"><path d=\"M3.5 8.6 12 4.5l8.5 4.1V16l-8.5 4.1L3.5 16z\"/><path d=\"M3.5 8.6 12 12.7l8.5-4.1\"/><path d=\"M12 12.7V20.6\"/></g></svg><h3>Cajas</h3><p>Cajas para delivery, gastronomía y todo tipo de envío.</p><a href=\"#\">Consultar <span>&#8594;</span></a></li>",
+      "css": ".ds-rubro { list-style: none; border-radius: 18px; padding: 1.9rem 1.6rem; display: flex; flex-direction: column; gap: 0.85rem; transition: transform 0.22s cubic-bezier(0.16,1,0.3,1), box-shadow 0.22s; } .ds-rubro--navy { background: #122B4C; color: #fff; } .ds-rubro h3 { color: inherit; font-family: 'Bricolage Grotesque', system-ui, sans-serif; font-weight: 800; font-size: 1.12rem; margin: 0; } .ds-rubro p { font-size: 0.94rem; line-height: 1.5; color: #C7D2E3; margin: 0; } .ds-rubro > a { font-weight: 700; font-size: 0.92rem; color: #9CC0F0; display: inline-flex; align-items: center; gap: 0.2rem; } .ds-rubro:hover { transform: translateY(-4px); box-shadow: 0 20px 36px -18px rgba(18, 43, 76, 0.55); }"
+    },
+    {
+      "name": "Site Navigation",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "Sticky translucent-cream header with underline-on-hover nav links; collapses to a grid-template-rows dropdown on mobile.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\">Nosotros</a><a href=\"#\">Rubros</a><a href=\"#\">Ubicación</a><a href=\"#\">Contacto</a></nav>",
+      "css": ".ds-nav { display: flex; gap: 2rem; font-weight: 600; font-size: 0.98rem; } .ds-nav a { color: #122B4C; position: relative; padding-block: 0.3rem; text-decoration: none; } .ds-nav a::after { content: ''; position: absolute; left: 0; right: 0; bottom: -2px; height: 2px; background: #D44533; transform: scaleX(0); transform-origin: left; transition: transform 0.2s cubic-bezier(0.16,1,0.3,1); } .ds-nav a:hover::after { transform: scaleX(1); }"
+    },
+    {
+      "name": "Floating WhatsApp Button",
+      "kind": "custom",
+      "refersTo": "button-whatsapp",
+      "description": "Site-wide circular floating action button, gated by an IntersectionObserver on the hero's own WhatsApp button so it only appears once that button scrolls out of view.",
+      "html": "<a class=\"ds-fab-whatsapp is-visible\" href=\"#\" aria-label=\"Escribinos por WhatsApp\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M17.5 6.5A8.3 8.3 0 0 0 4.4 16.6L3.5 20.5l4-1a8.3 8.3 0 0 0 12-11.9zm-5.5 12.6h0a6.9 6.9 0 0 1-3.5-1l-.25-.15-2.6.7.7-2.5-.16-.26a6.9 6.9 0 1 1 5.8 3.2z\"/></svg></a>",
+      "css": ".ds-fab-whatsapp { position: fixed; right: 1.25rem; bottom: 1.25rem; width: 58px; height: 58px; border-radius: 50%; background: #C23A28; color: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 12px 28px -10px rgba(194, 58, 40, 0.65); transition: transform 0.22s cubic-bezier(0.16,1,0.3,1), box-shadow 0.2s, opacity 0.22s; } .ds-fab-whatsapp:hover { transform: translateY(-3px) scale(1.04); box-shadow: 0 16px 32px -10px rgba(194, 58, 40, 0.7); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Storefront as Proof",
+    "overview": "Wilpel's home doesn't open with a generic product hero or a price-less catalog wall — it opens with the actual storefront on Av. Belgrano and the \"40 years in Wilde\" claim, because the trajectory itself is the sales argument for a neighborhood papelera with three very different buyer types (comercios, empresas, público minorista). The palette and mark come from the brand's own Instagram, so the system reads as an inherited identity being formalized in code, not a fresh invention: warm cream fields, a navy anchor, and a red accent that had to be deliberately re-tuned (see Colors) once it was asked to carry white body text rather than just sit as a brand dot. Bricolage Grotesque replaces an originally-planned Plus Jakarta Sans/Outfit pairing after the project's own detector flagged that pairing as an overused AI-generated-UI default — a disclosed correction, not drift. The system is flat and warm, never sharp or corporate: soft ambient shadows (never hard offset), fully rounded pill buttons, generously rounded tile corners, and single-stroke line icons drawn to match the brand mark's own roll-of-tape geometry. Depth is conveyed by soft, color-tinted ambient shadows on hover, not by borders or elevation layers stacked by default.",
+    "keyCharacteristics": [
+      "Photograph-led opening: the real storefront, not a stock or illustrated hero.",
+      "One accent red, re-tuned for accessibility rather than left at its \"true\" brand value.",
+      "Pill-shaped, single-accent buttons; no ghost/tertiary button variant in the built system.",
+      "Four-color committed rubro tiles (navy / red-ink / blue / cream), not uniform white icon-cards.",
+      "One authored entrance choreography on the hero; everywhere else the page is static.",
+      "A four-step WhatsApp contact ladder, present at every scroll depth without ever overlapping itself."
+    ],
+    "rules": [
+      { "name": "The Red-Ink Substitution Rule", "body": "The brand's literal Instagram red (#D44533) is reserved for non-text-bearing brand accents (the mark's stroke, small decorative uses). Any surface pairing red with white body or button text must use --red-ink (#C23A28) instead — it is the only red verified to clear 4.5:1 contrast. Do not reintroduce the raw brand red under white text to \"match the logo more exactly\"; that regresses a fixed accessibility defect.", "section": "colors" },
+      { "name": "The Committed-Panel Rule", "body": "Rubro/category tiles are solid color blocks (navy, red-ink, blue, or bordered cream) with color: inherit headings, not white card shells with a colored icon accent. A future tiled section on this site should default to this pattern rather than a generic white card unless there's a specific reason to break from it.", "section": "colors" },
+      { "name": "The Two-Voice Rule", "body": "Only headings, the brand name, buttons, and short tag/label text ever use Bricolage Grotesque. Body copy — leads, descriptions, footer text — always uses the system stack. Do not promote body copy into the display face; that would erase the hierarchy the pairing exists to create.", "section": "typography" },
+      { "name": "The Ambient-Only Rule", "body": "Shadows are soft and color-tinted, never hard-edged or offset. This world does not use neobrutalist hard shadows anywhere in the build; don't introduce one for a future component.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use --red-ink (#C23A28), not the raw brand red #D44533, on any surface that also carries white text — it's the only variant verified at 4.5:1+ contrast.",
+      "Do keep rubro/category tiles as solid committed-color panels with inherited heading color, not white card shells.",
+      "Do reserve Bricolage Grotesque for headings, brand name, buttons, and short labels; keep body copy in the system stack.",
+      "Do use soft, color-tinted ambient shadows for hover/elevation states; keep the page flat at rest.",
+      "Do follow the WhatsApp contact ladder shape (small header button → hero CTA → dedicated band with per-rubro links → gated floating button) for any future contact-oriented addition."
+    ],
+    "donts": [
+      "Don't use Plus Jakarta Sans, Outfit, or other detector-flagged overused AI-UI faces anywhere on this site — this was an explicit, disclosed correction already made once.",
+      "Don't introduce hard-edged or offset (neobrutalist-style) shadows; every shadow in this system is a soft ambient blur.",
+      "Don't animate max-height for collapsing UI (mobile nav); use grid-template-rows: 0fr → 1fr instead, per the project's own layout-thrashing detector.",
+      "Don't state shipping/payment conditions anywhere on the site until they're confirmed facts in PRODUCT.md — their absence is deliberate, not an omission to \"fix.\" (Saturday hours were confirmed by the client after this system was first documented and now ship on the page: Sáb 8:00–13:30.)"
+    ]
+  }
+}

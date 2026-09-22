@@ -1,0 +1,32 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfvars
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+# .terraform.lock.hcl SÍ se commitea: fija las versiones de los providers.
+
+# macOS
+.DS_Store
+
+# Herramientas locales de Claude Code: skills instaladas (incluye un binario nativo pesado
+# y específico de esta Mac) y capturas de las pruebas con Playwright. No son parte del sitio.
+.claude/
+.playwright-mcp/
+
+# Impeccable: se commitean DESIGN.md, design.json, el contrato de dirección y el surface brief
+# (documentan el sistema de diseño). Se ignoran las capturas de QA y los logs de decisión, que son
+# artefactos de proceso, no documentación durable.
+.impeccable/review/
+.impeccable/questions/
+.impeccable/decision-payload.json
+
+# Notas internas de progreso de la sesión: tienen el Account ID de AWS y un mail personal.
+# Útil para retomar el trabajo, pero no para un repo compartido.
+design/estado-del-proyecto.md
