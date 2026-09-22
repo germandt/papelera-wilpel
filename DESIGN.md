@@ -272,6 +272,17 @@ avoids a known overlap bug an earlier version had on mobile, and is confirmed as
 future page on this site that adds a contact path should follow this same escalating-ladder shape rather
 than a single floating button alone.
 
+### Opiniones (reseñas de Google)
+Snapshot manual de datos reales (no integración en vivo con la API de Google — el sitio no tiene backend
+y la API exige una cuenta de Google Cloud con facturación; ver `PRODUCT.md`). Las tarjetas de reseña son
+**neutras** (blanco sobre crema, borde `--cream-line`, radio `--radius`), deliberadamente distinto de la
+Committed-Panel Rule de las tiles de rubro: una cita de cliente necesita quedar legible y creíble, no
+competir con un panel de color sólido. El ícono de estrella (`#icon-star`, SVG propio, nunca el carácter
+Unicode "★") usa `--red-ink`, no el amarillo de Google, para mantenerse dentro de la paleta ya cerrada del
+sitio. El promedio (4.5 de 5) se arma con dos filas de estrellas superpuestas — una vacía en
+`--cream-line` y una llena en `--red-ink` recortada al 90% de ancho — para reflejar la media estrella real,
+en vez de redondear.
+
 ## Do's and Don'ts
 
 ### Do:
