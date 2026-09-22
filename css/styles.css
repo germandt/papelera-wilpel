@@ -295,13 +295,17 @@ html { scrollbar-color: var(--blue) var(--cream); scrollbar-width: thin; }
   font-size: clamp(1.8rem, 3.4vw, 2.5rem); /* mismo paso que los h2 de sección */
   color: var(--navy); line-height: 1;
 }
-.opiniones__stars svg { width: 20px; height: 20px; }
-.opiniones__stars-empty { display: flex; gap: 2px; color: var(--cream-line); }
-.opiniones__stars--avg { position: relative; display: inline-flex; }
-.opiniones__stars-fill {
-  position: absolute; inset: 0; width: 90%; overflow: hidden;
-  display: flex; gap: 2px; color: var(--red-ink);
-}
+.opiniones__stars--avg { display: flex; gap: 2px; }
+.opiniones__stars--avg .star { width: 20px; height: 20px; }
+.opiniones__stars--avg .star--full { color: var(--red-ink); }
+
+/* Estrella partida (el .5 de "4.5"): una sola estrella de 20x20, no dos filas de 5
+   superpuestas — evita el redondeo de flexbox que desalineaba la gris detrás de la roja. */
+.star--half { position: relative; display: inline-block; }
+.star__base, .star__fill { position: absolute; inset: 0; width: 20px; height: 20px; }
+.star__base { color: var(--cream-line); }
+.star__fill { width: 50%; overflow: hidden; color: var(--red-ink); }
+
 .opiniones__count { color: var(--ink-soft); font-size: 0.95rem; }
 
 .opiniones__grid {
