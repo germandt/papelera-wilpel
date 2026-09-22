@@ -300,11 +300,18 @@ html { scrollbar-color: var(--blue) var(--cream); scrollbar-width: thin; }
 .opiniones__stars--avg .star--full { color: var(--red-ink); }
 
 /* Estrella partida (el .5 de "4.5"): una sola estrella de 20x20, no dos filas de 5
-   superpuestas — evita el redondeo de flexbox que desalineaba la gris detrás de la roja. */
-.star--half { position: relative; display: inline-block; }
-.star__base, .star__fill { position: absolute; inset: 0; width: 20px; height: 20px; }
-.star__base { color: var(--cream-line); }
-.star__fill { width: 50%; overflow: hidden; color: var(--red-ink); }
+   superpuestas — evita el redondeo de flexbox que desalineaba la gris detrás de la roja.
+   El recorte va en un <span> contenedor (.star__fill), no en el <svg> directamente: un
+   <svg> que referencia un <symbol> vía <use> reescala TODO el dibujo para entrar en su
+   caja (preserveAspectRatio por defecto), así que achicar el ancho del svg mismo encoge
+   la estrella entera en vez de recortarla — el bug era ese, no el tamaño del contenedor. */
+.star--half { position: relative; display: inline-block; width: 20px; height: 20px; }
+.star__base { position: absolute; inset: 0; width: 20px; height: 20px; color: var(--cream-line); }
+.star__fill {
+  position: absolute; inset: 0; width: 50%; height: 20px;
+  overflow: hidden; color: var(--red-ink);
+}
+.star__fill svg { display: block; width: 20px; height: 20px; }
 
 .opiniones__count { color: var(--ink-soft); font-size: 0.95rem; }
 
