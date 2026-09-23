@@ -36,11 +36,13 @@ con rubros variados y envíos a domicilio.
 ## Operating Context
 
 - Venta por mayor y por menor.
-- Atención en el local de Av. Belgrano 6085, Wilde (1875), Buenos Aires. La ficha de Google Maps del
+- Atención en el local de Av. Belgrano 6085, Wilde, Buenos Aires. La ficha de Google Maps del
   negocio dice "Av. Manuel Belgrano 6042" — el cliente confirmó que 6085 es la dirección correcta
   (22/09/2026); la ficha de Google está desactualizada y queda pendiente que el cliente la corrija ahí
-  (fuera del alcance de este sitio).
-- Horario: Lun-Vie 8:00 a 13:00 y 14:30 a 17:30. Sábados 8:00 a 13:30.
+  (fuera del alcance de este sitio). El código postal (1875) se relevó pero el cliente pidió no
+  mostrarlo en el sitio (23/09/2026).
+- Horario: Lun-Vie 8:00 a 13:00 y 14:30 a 17:30. Sábados 8:00 a 13:00 (corregido 23/09/2026; antes
+  decía 13:30 por error).
 - Contacto: teléfonos 4206-9662 y 4206-9747; WhatsApp 11 6270-1341 (`https://wa.me/5491162701341`).
 - Instagram: @wilpelpapel. Sus historias destacadas ya ordenan la información: Nosotros, Horarios, Contacto, Pagos, Envíos, Ubicación.
 - Rubros vistos en el Instagram: embalaje (stretch, pluribol, cintas), cajas para gastronomía, descartables,

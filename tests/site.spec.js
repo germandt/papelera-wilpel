@@ -91,7 +91,10 @@ test.describe('Home de Wilpel', () => {
 
   test('el horario del sábado está confirmado', async ({ page }) => {
     await page.goto('/');
-    await expect(page.locator('#ubicacion')).toContainText('8:00 a 13:30');
+    // Scoped al <dd> de "Sábados", no solo a #ubicacion en general: la línea de lunes a
+    // viernes también contiene "8:00 a 13:00" como substring y daría un falso positivo.
+    const sabadoRow = page.locator('#ubicacion .ubicacion__horarios div', { hasText: 'Sábados' });
+    await expect(sabadoRow).toHaveText('Sábados8:00 a 13:00');
   });
 
   test('el footer tiene los teléfonos con enlaces tel: válidos', async ({ page }) => {

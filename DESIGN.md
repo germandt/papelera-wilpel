@@ -305,4 +305,5 @@ en vez de redondear.
   instead, per the project's own layout-thrashing detector.
 - **Don't** state shipping/payment conditions anywhere on the site until they're confirmed facts in
   PRODUCT.md — their absence is deliberate, not an omission to "fix." (Saturday hours were confirmed by the
-  client after this system was first documented and now ship on the page: Sáb 8:00–13:30.)
+  client after this system was first documented and now ship on the page: Sáb 8:00–13:00, corrected
+  23/09/2026 — it originally shipped as 13:30 by mistake.)
