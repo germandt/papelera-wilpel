@@ -105,7 +105,10 @@ test.describe('Home de Wilpel', () => {
     await page.goto('/');
     const fab = page.locator('.fab-whatsapp');
     await expect(fab).not.toHaveClass(/is-visible/);
-    await page.locator('#rubros').scrollIntoViewIfNeeded();
+    // #opiniones (no #rubros): con la foto del hero en formato panorámico, en pantallas
+    // anchas #rubros ya puede quedar a la vista sin scrollear, y el hero no llega a salir
+    // de la ventana — #opiniones sí garantiza haber pasado el hero en cualquier viewport.
+    await page.locator('#opiniones').scrollIntoViewIfNeeded();
     await expect(fab).toHaveClass(/is-visible/);
   });
 
