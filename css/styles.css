@@ -189,9 +189,10 @@ html { scrollbar-color: var(--blue) var(--cream); scrollbar-width: thin; }
 .hero__photo {
   margin: 0; border-radius: var(--radius); overflow: hidden;
   box-shadow: 0 24px 48px -24px rgba(18, 43, 76, 0.35);
-  aspect-ratio: 4 / 3.2;
+  /* mismo ratio que la foto real (1187x778) en todos los anchos: el frente del
+     local es panorámico, y recortarlo a un ratio más vertical le corta los costados. */
+  aspect-ratio: 1187 / 778;
 }
-@media (min-width: 900px) { .hero__photo { aspect-ratio: 4 / 5; } }
 .hero__photo img { width: 100%; height: 100%; object-fit: cover; }
 
 .hero__content { display: flex; flex-direction: column; gap: 1.15rem; }

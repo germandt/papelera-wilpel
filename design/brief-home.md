@@ -30,6 +30,12 @@ con los 40 años de trayectoria y los rubros; debajo, el botón de WhatsApp y "c
 baja resolución). Placeholder hasta que lleguen las fotos propias que mencionó el cliente; se reemplaza sin tocar
 el layout.
 
+> **Actualización 22/09/2026:** el cliente pidió reemplazar esta foto por una imagen generada por IA del
+> frente del local (`assets/img/local-fachada-render.jpg`), sabiendo que no es una fotografía real — ver
+> `PRODUCT.md` → Evidence on Hand. La caja del hero pasó de un recorte vertical (4:5 desktop) a un
+> aspect-ratio panorámico (1187:778, el de la imagen real) para mostrar el local entero sin recortar los
+> costados, a pedido del cliente.
+
 ## 4. Alcance y límites
 
 Una sola página (`index.html`), navegación por anclas desde el header. Secciones, en orden:

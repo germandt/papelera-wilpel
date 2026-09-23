@@ -78,6 +78,9 @@ con rubros variados y envíos a domicilio.
   ya usa el sitio) es la correcta — ver Operating Context.
 - No existen: logo vectorial, lista de clientes más allá de las 3 reseñas citadas, precios, condiciones de
   envío ni medios de pago confirmados. No hay que inventarlos.
+- La foto del hero (`assets/img/local-fachada-render.jpg`) es una imagen generada por IA del frente del
+  local, no una fotografía real — reemplaza a la foto real usada antes (tomada del Instagram). El cliente
+  pidió explícitamente este reemplazo (22/09/2026) sabiendo que no es una foto auténtica.
 
 ## Product Principles
 
