@@ -84,6 +84,17 @@ con rubros variados y envíos a domicilio.
   local, no una fotografía real — reemplaza a la foto real usada antes (tomada del Instagram). El cliente
   pidió explícitamente este reemplazo (22/09/2026) sabiendo que no es una foto auténtica.
 
+## SEO (23/09/2026)
+
+Fundamentos técnicos agregados a pedido del cliente: `<link rel="canonical">` (resuelve que
+`wilpel.com.ar` y `www.wilpel.com.ar` sirven el mismo contenido sin redirect — no se tocó
+infraestructura, el redirect 301 a nivel CloudFront queda como mejora futura si hace falta), Open
+Graph/Twitter Card (usa la misma foto del hero para el preview al compartir el link), `robots.txt` +
+`sitemap.xml`, y datos estructurados `schema.org/Store` con los mismos datos reales que ya están
+visibles en la página (dirección, teléfono, horarios, reseñas y rating de Google). Sin `geo`
+(lat/long): las coordenadas de la ficha de Google Maps corresponden a la dirección vieja e incorrecta
+(ver más arriba), así que no se publican sin verificar.
+
 ## Product Principles
 
 1. Presencia y contacto antes que catálogo: la página se ordena para que alguien confíe y llame o escriba.

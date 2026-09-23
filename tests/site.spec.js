@@ -137,3 +137,50 @@ test.describe('Home de Wilpel', () => {
     expect(hasOverflow).toBe(false);
   });
 });
+
+test.describe('SEO', () => {
+  test('canonical y meta description apuntan al dominio real', async ({ page }) => {
+    await page.goto('/');
+    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://wilpel.com.ar/');
+    const description = page.locator('meta[name="description"]');
+    await expect(description).toHaveAttribute('content', /Wilpel/);
+  });
+
+  test('Open Graph y Twitter Card tienen título, descripción e imagen absoluta', async ({ page }) => {
+    await page.goto('/');
+    await expect(page.locator('meta[property="og:title"]')).toHaveAttribute('content', /Wilpel/);
+    await expect(page.locator('meta[property="og:url"]')).toHaveAttribute('content', 'https://wilpel.com.ar/');
+    await expect(page.locator('meta[property="og:image"]')).toHaveAttribute('content', /^https:\/\/wilpel\.com\.ar\//);
+    await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute('content', 'summary_large_image');
+  });
+
+  test('el JSON-LD es válido y coincide con los datos reales de la página', async ({ page }) => {
+    await page.goto('/');
+    const json = await page.locator('script[type="application/ld+json"]').textContent();
+    const data = JSON.parse(json);
+
+    expect(data['@type']).toBe('Store');
+    expect(data.telephone).toBe('+541142069662');
+    expect(data.address.streetAddress).toBe('Av. Belgrano 6085');
+    expect(data.address.addressLocality).toBe('Wilde');
+    // Sin coordenadas: ver el comentario en index.html sobre por qué no se usa la
+    // geolocalización de la ficha de Google Maps (dirección vieja, no verificada).
+    expect(data.geo).toBeUndefined();
+
+    expect(data.aggregateRating.ratingValue).toBe('4.5');
+    expect(data.aggregateRating.reviewCount).toBe('472');
+
+    const authores = data.review.map((r) => r.author.name);
+    expect(authores).toEqual(['Ricardo Omar Varela', 'Matias Lopez', 'Julio Lazarte']);
+  });
+
+  test('robots.txt referencia el sitemap y el sitemap incluye la home', async ({ request }) => {
+    const robots = await request.get('/robots.txt');
+    expect(robots.ok()).toBeTruthy();
+    expect(await robots.text()).toContain('Sitemap: https://wilpel.com.ar/sitemap.xml');
+
+    const sitemap = await request.get('/sitemap.xml');
+    expect(sitemap.ok()).toBeTruthy();
+    expect(await sitemap.text()).toContain('<loc>https://wilpel.com.ar/</loc>');
+  });
+});
