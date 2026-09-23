@@ -88,3 +88,14 @@ con rubros variados y envíos a domicilio.
 2. El camino a Wilpel (WhatsApp, teléfono, local) siempre está a la vista.
 3. Un solo sitio para tres públicos, sin obligar al visitante a elegir cuál es.
 4. Solo se afirma lo verificado: años de trayectoria, envíos y pagos hasta que estén confirmados.
+
+## Ideas a futuro (fuera de alcance de v1)
+
+- **Módulo de productos de MercadoLibre**: si el cliente publica productos ahí, se podría exponer un
+  catálogo en la home (o linkear directamente a su local de ML). Implica mostrar precios, lo cual hoy
+  contradice el principio "Sin catálogo con precios ni carrito" — sería una decisión de producto para v2,
+  no solo técnica. Opciones evaluadas: (a) simple botón/link al local de ML (menor esfuerzo), (b) snapshot
+  estático de productos igual que se hizo con las reseñas de Google en Opiniones, (c) integración en vivo
+  contra la API pública de MercadoLibre (`api.mercadolibre.com/sites/MLA/search?seller_id=...`), que
+  requeriría confirmar soporte de CORS o sumar una función serverless chica, ya que el sitio no tiene
+  backend propio.
